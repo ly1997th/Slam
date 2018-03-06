@@ -1,0 +1,1 @@
+/home/lili/slam/ch6/ceres_curve_fitting/build/CMakeFiles/curve_fitting.dir

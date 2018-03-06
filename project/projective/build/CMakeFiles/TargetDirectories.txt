@@ -1,0 +1,3 @@
+/home/ly/slam/project/projective/build/CMakeFiles/edit_cache.dir
+/home/ly/slam/project/projective/build/CMakeFiles/rebuild_cache.dir
+/home/ly/slam/project/projective/build/CMakeFiles/projective.dir
