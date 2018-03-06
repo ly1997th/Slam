@@ -1,0 +1,28 @@
+#声明最低Cmake版本
+cmake_minimum_required( VERSION 2.8 )
+
+#声明项目名称
+project( example )
+
+#声明build模式,Release为发行优化模式，Debug为查错模式
+set( CMAKE_BUILD_TYPE "Release" )
+set( CMAKE_BUILD_TYPE "Debug" )
+
+#添加Cmake库以使用需要使用Cmake的第三方库，如Ceres                   
+list( APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules )
+
+#使用ceres库的声明要求
+#寻找ceres库并添加它的头文件
+find_package( Ceres REQUIRED )
+include_directories( ${CERES_INCLUDE_DIRS} )
+
+#使用OpenCV库的声明要求
+#寻找OpenCV库并添加它的头文件
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_DIRS} )
+
+#将cpp等source文件和二进制工程进行链接,文件名可以和项目名不同
+add_executable(example example.cpp)
+
+# 二进制文件与项目中所有的使用的第三方库链接
+target_link_libraries( example ${CERES_LIBRARIES} ${OpenCV_LIBS} )

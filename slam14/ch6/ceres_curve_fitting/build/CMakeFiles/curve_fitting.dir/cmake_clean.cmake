@@ -1,10 +1,10 @@
-FILE(REMOVE_RECURSE
-  "CMakeFiles/curve_fitting.dir/main.cpp.o"
+file(REMOVE_RECURSE
+  "CMakeFiles/curve_fitting.dir/ceres_curve_fitting.cpp.o"
   "curve_fitting.pdb"
   "curve_fitting"
 )
 
 # Per-language clean rules from dependency scanning.
-FOREACH(lang CXX)
-  INCLUDE(CMakeFiles/curve_fitting.dir/cmake_clean_${lang}.cmake OPTIONAL)
-ENDFOREACH(lang)
+foreach(lang CXX)
+  include(CMakeFiles/curve_fitting.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
