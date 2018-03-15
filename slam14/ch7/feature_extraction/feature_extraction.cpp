@@ -27,7 +27,7 @@ int main(int argc, char** argv)
 
 	orb->compute(img_1,keypoints_1,descriptors_1);
 	orb->compute(img_2,keypoints_2,descriptors_2);
-
+ 
 	Mat outimg1;
 	drawKeypoints(img_1,keypoints_1,outimg1,Scalar::all(-1),DrawMatchesFlags::DEFAULT);
 	imshow("ORB feature points:",outimg1);
