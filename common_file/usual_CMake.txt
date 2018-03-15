@@ -32,6 +32,9 @@ include_directories( ${OpenCV_DIRS} )
 
 #寻找G2O库并声明使用
 find_package(G2O REQUIRED)
-include_directories( ${G2O_INCLUDE_DIRS} "/usr/include/eigen3")
+include_directories( ${G2O_INCLUDE_DIRS} )
+
+#使用Eigen，因为是个用头文件搭建的库，所以没有其他工程文件
+include_directories("/usr/include/eigen3")
 
 
